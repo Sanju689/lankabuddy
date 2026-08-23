@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LankaBuddy | Experience Sri Lanka With a Local</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f7f2;
+            color: #173b31;
+        }
+
+        header {
+            height: 72px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #173b31;
+        }
+
+        .logo span {
+            color: #e28a4b;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #52635d;
+            font-size: 14px;
+        }
+
+        .signup {
+            background: #173b31;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .hero {
+            min-height: 620px;
+            background:
+                linear-gradient(
+                    rgba(10,45,35,.65),
+                    rgba(10,45,35,.35)
+                ),
+                url("https://images.unsplash.com/photo-1588598198321-9735fd5245f3?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            padding: 60px 6%;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            color: white;
+        }
+
+        .hero small {
+            letter-spacing: 2px;
+            color: #f0a66c;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(45px, 7vw, 80px);
+            line-height: 1.05;
+            margin: 20px 0;
+        }
+
+        .hero h1 span {
+            color: #f0aa72;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        .search-box {
+            margin-top: 35px;
+            background: white;
+            color: #173b31;
+            padding: 10px;
+            border-radius: 14px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 180px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,.2);
+        }
+
+        .search-item {
+            padding: 12px 18px;
+            border-right: 1px solid #ddd;
+        }
+
+        .search-item small {
+            color: #777;
+            letter-spacing: 1px;
+        }
+
+        .search-item p {
+            color: #173b31;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+
+        .search-button {
+            background: #e28a4b;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 80px 6%;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            margin-top: 8px;
+        }
+
+        .kicker {
+            color: #d47b3d;
+            letter-spacing: 2px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .cards {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e7e9e5;
+        }
+
+        .card-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img1 {
+            background-image: url("https://images.unsplash.com/photo-1597040663342-45b6af3d1b1c?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .img2 {
+            background-image: url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .img3 {
+            background-image: url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .rating {
+            color: #d47b3d;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #718078;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .price {
+            margin-top: 18px;
+            font-weight: bold;
+        }
+
+        .today {
+            background: #edf3ed;
+            max-width: none;
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+
+        .today-box {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .today-item {
+            background: white;
+            padding: 20px;
+            margin-top: 12px;
+            border-radius: 12px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .host {
+            background:
+                linear-gradient(rgba(10,45,35,.8),rgba(10,45,35,.5)),
+                url("https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            padding: 100px 6%;
+        }
+
+        .host h2 {
+            font-family: Georgia, serif;
+            font-size: 52px;
+            margin: 15px 0;
+        }
+
+        .host p {
+            max-width: 550px;
+            line-height: 1.7;
+        }
+
+        .host button {
+            margin-top: 25px;
+            padding: 14px 22px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #102b24;
+            color: white;
+            padding: 60px 6%;
+            text-align: center;
+        }
+
+        footer p {
+            color: #9aaca5;
+            margin-top: 10px;
+        }
+
+        @media(max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .search-box {
+                grid-template-columns: 1fr;
+            }
+
+            .search-item {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .search-button {
+                height: 50px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero {
+                min-height: 700px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Lanka<span>Buddy</span>
+    </div>
+
+    <nav>
+        <a href="#">Explore</a>
+        <a href="#">Experiences</a>
+        <a href="#">Become a Host</a>
+        <a href="#">How It Works</a>
+    </nav>
+
+    <button class="signup">
+        Sign Up
+    </button>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <small>
+            AUTHENTIC SRI LANKA · LOCAL CONNECTIONS
+        </small>
+
+        <h1>
+            Experience Sri Lanka
+            <span>With a Local.</span>
+        </h1>
+
+        <p>
+            Discover authentic experiences, meet friendly locals,
+            and explore Sri Lanka beyond the tourist path.
+        </p>
+
+        <div class="search-box">
+
+            <div class="search-item">
+                <small>WHERE?</small>
+                <p>📍 Colombo, Galle, Ella...</p>
+            </div>
+
+            <div class="search-item">
+                <small>WHEN?</small>
+                <p>📅 Choose a date</p>
+            </div>
+
+            <div class="search-item">
+                <small>WHAT?</small>
+                <p>✨ Food, culture, adventure...</p>
+            </div>
+
+            <button class="search-button">
+                Find Experiences →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <span class="kicker">
+        DISCOVER
+    </span>
+
+    <h2 class="section-title">
+        Popular Experiences
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-image img1"></div>
+
+            <div class="card-content">
+
+                <div class="rating">
+                    ★ 4.9
+                </div>
+
+                <h3>
+                    Galle Sunset Walk with a Local
+                </h3>
+
+                <p>
+                    Explore Galle Fort, hidden lanes and
+                    beautiful sunset views with a local.
+                </p>
+
+                <div class="price">
+                    $14 / person
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image img2"></div>
+
+            <div class="card-content">
+
+                <div class="rating">
+                    ★ 5.0
+                </div>
+
+                <h3>
+                    Cook a Sri Lankan Family Dinner
+                </h3>
+
+                <p>
+                    Shop, cook and enjoy a traditional
+                    Sri Lankan rice & curry meal.
+                </p>
+
+                <div class="price">
+                    $25 / person
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image img3"></div>
+
+            <div class="card-content">
+
+                <div class="rating">
+                    ★ 4.8
+                </div>
+
+                <h3>
+                    Ella Tea & Mountain Experience
+                </h3>
+
+                <p>
+                    Discover tea gardens and everyday
+                    life in the beautiful hill country.
+                </p>
+
+                <div class="price">
+                    $19 / person
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section today">
+
+    <div class="today-box">
+
+        <span class="kicker">
+            MEET PEOPLE, NOT JUST PLACES
+        </span>
+
+        <h2 class="section-title">
+            🔥 Happening Today
+        </h2>
+
+        <div class="today-item">
+            <div>
+                <strong>Colombo Street Food Walk</strong>
+                <p>6:00 PM · 2 spots left</p>
+            </div>
+            <strong>$12</strong>
+        </div>
+
+        <div class="today-item">
+            <div>
+                <strong>Galle Fort Sunset Walk</strong>
+                <p>5:30 PM · 4 spots left</p>
+            </div>
+            <strong>$14</strong>
+        </div>
+
+        <div class="today-item">
+            <div>
+                <strong>Local Coffee & Stories</strong>
+                <p>7:00 PM · 3 spots left</p>
+            </div>
+            <strong>$9</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="host">
+
+    <span class="kicker">
+        FOR LOCALS
+    </span>
+
+    <h2>
+        Share what makes<br>
+        Sri Lanka special.
+    </h2>
+
+    <p>
+        Turn your passion, skills or favourite places
+        into an experience travellers will remember.
+    </p>
+
+    <button>
+        Become a Local Host →
+    </button>
+
+</section>
+
+
+<footer>
+
+    <h2>
+        LankaBuddy 🇱🇰
+    </h2>
+
+    <p>
+        Experience Sri Lanka with a local.
+    </p>
+
+    <p>
+        © 2026 LankaBuddy
+    </p>
+
+</footer>
+
+</body>
+</html>
