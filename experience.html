@@ -426,103 +426,80 @@ footer p {
 
 
         <!-- BOOKING -->
+<div class="booking">
 
-        <div class="booking">
+    <h3>Request to Join</h3>
 
-            <h3>
-                Request to Join
-            </h3>
+    <form
+        action="https://formsubmit.co/kalanaashan03@gmail.com"
+        method="POST"
+    >
 
-            <div class="booking-row">
+        <input type="hidden"
+               name="_subject"
+               value="New LankaBuddy Oruwa Fishing Request">
 
-                <label>
-                    DATE
-                </label>
+        <input type="hidden"
+               name="_template"
+               value="table">
 
-                <input type="date">
+        <input type="hidden"
+               name="_captcha"
+               value="true">
 
-            </div>
-
-
-            <div class="booking-row">
-
-                <label>
-                    GUESTS
-                </label>
-
-                <select>
-
-                    <option>1 Guest</option>
-                    <option>2 Guests</option>
-                    <option>3 Guests</option>
-                    <option>4 Guests</option>
-
-                </select>
-
-            </div>
-
-
-            <div class="booking-row">
-
-                <label>
-                    YOUR NAME
-                </label>
-
-                <input
-                    type="text"
-                    placeholder="Enter your name"
-                >
-
-            </div>
-
-
-            <div class="booking-row">
-
-                <label>
-                    EMAIL
-                </label>
-
-                <input
-                    type="email"
-                    placeholder="Enter your email"
-                >
-
-            </div>
-
-
-            <button
-                class="join"
-                onclick="alert('Your request has been received! We will contact you soon.')"
-            >
-
-                🦞 Request to Join
-
-            </button>
-
+        <div class="booking-row">
+            <label>DATE</label>
+            <input type="date" name="date" required>
         </div>
 
-    </div>
+        <div class="booking-row">
+            <label>GUESTS</label>
 
-</main>
+            <select name="guests" required>
+                <option value="">Select guests</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+            </select>
+        </div>
 
+        <div class="booking-row">
+            <label>YOUR NAME</label>
 
-<footer>
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+        </div>
 
-    <h2>
-        LankaBuddy 🇱🇰
-    </h2>
+        <div class="booking-row">
+            <label>EMAIL</label>
 
-    <p>
-        Experience Sri Lanka with a local.
-    </p>
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+        </div>
 
-    <p>
-        © 2026 LankaBuddy
-    </p>
+        <div class="booking-row">
+            <label>MESSAGE (OPTIONAL)</label>
 
-</footer>
+            <textarea
+                name="message"
+                placeholder="Anything you'd like us to know?"
+                style="width:100%;height:80px;padding:12px;border:1px solid #ddd;border-radius:8px;resize:none;"
+            ></textarea>
+        </div>
 
+        <button class="join" type="submit">
+            🦞 Request to Join
+        </button>
 
-</body>
+    </form>
 
-</html>
+</div>
