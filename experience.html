@@ -267,7 +267,80 @@ footer p {
 </head>
 
 
-<body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://qxalcxhvtkpuvfcpnhti.supabase.co";
+
+/*
+  IMPORTANT:
+  Paste your Supabase PUBLISHABLE key between the quotes below.
+  Do NOT use the secret/service_role key.
+*/
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_sdJv_YFU55cxoma4x9jLRA_90RFnj5Y";
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+);
+
+const bookingForm = document.querySelector(".booking form");
+
+if (bookingForm) {
+
+    bookingForm.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+        const submitButton = bookingForm.querySelector(".join");
+
+        submitButton.disabled = true;
+        submitButton.innerText = "Sending...";
+
+        const formData = new FormData(bookingForm);
+
+        const bookingData = {
+            experience: "Traditional Oruwa Lobster Fishing",
+            location: "Hikkaduwa, Sri Lanka",
+            booking_date: formData.get("date"),
+            guests: Number(formData.get("guests").split(" ")[0]),
+            guest_name: formData.get("name"),
+            guest_email: formData.get("email"),
+            message: formData.get("message") || "",
+            status: "pending"
+        };
+
+        const { error } = await supabaseClient
+            .from("booking_requests")
+            .insert([bookingData]);
+
+        if (error) {
+
+            console.error(error);
+
+            alert(
+                "Sorry, your request could not be submitted. Please try again."
+            );
+
+            submitButton.disabled = false;
+            submitButton.innerText = "🦞 Request to Join";
+
+            return;
+        }
+
+        alert(
+            "🦞 Request received! We will contact you soon."
+        );
+
+        bookingForm.reset();
+
+        submitButton.disabled = false;
+        submitButton.innerText = "🦞 Request to Join";
+
+    });
+
+}
+</script><body>
 
 
 <header>
