@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Traditional Oruwa Lobster Fishing | LankaBuddy</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7f2;
+    color: #173b31;
+}
+
+/* HEADER */
+
+header {
+    height: 72px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e28a4b;
+}
+
+nav a {
+    text-decoration: none;
+    color: #52635d;
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+.signup {
+    background: #173b31;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+}
+
+/* HERO IMAGE */
+
+.hero-image {
+    height: 430px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.25)
+        ),
+        url("https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* MAIN */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 6%;
+}
+
+.location {
+    color: #d47b3d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 6vw, 60px);
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #64736c;
+    line-height: 1.7;
+    max-width: 750px;
+}
+
+/* INFO */
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.info-box {
+    background: white;
+    border: 1px solid #e5e8e4;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.info-box small {
+    color: #7b8781;
+}
+
+.info-box strong {
+    display: block;
+    margin-top: 7px;
+}
+
+/* CONTENT */
+
+.content {
+    display: grid;
+    grid-template-columns: 1.5fr .8fr;
+    gap: 45px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #64736c;
+    line-height: 1.8;
+}
+
+.includes {
+    margin-top: 35px;
+}
+
+.includes div {
+    padding: 13px 0;
+    border-bottom: 1px solid #e5e8e4;
+}
+
+/* BOOKING CARD */
+
+.booking {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e2e6e2;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    height: fit-content;
+}
+
+.booking h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-row {
+    margin: 15px 0;
+}
+
+.booking-row label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.booking-row input,
+.booking-row select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.join {
+    width: 100%;
+    background: #e28a4b;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* SAFETY */
+
+.safety {
+    background: #edf3ed;
+    margin-top: 45px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.safety h3 {
+    margin-bottom: 10px;
+}
+
+.safety p {
+    color: #64736c;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+    background: #102b24;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+}
+
+footer p {
+    color: #9aaca5;
+    margin-top: 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding-top: 35px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        Lanka<span>Buddy</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">Experiences</a>
+        <a href="#">Become a Host</a>
+    </nav>
+
+    <button class="signup">
+        Sign Up
+    </button>
+
+</header>
+
+
+<!-- HERO IMAGE -->
+
+<section class="hero-image"></section>
+
+
+<main class="container">
+
+    <div class="location">
+        📍 HIKKADUWA, SRI LANKA
+    </div>
+
+    <h1>
+        Traditional Oruwa<br>
+        Lobster Fishing Experience
+    </h1>
+
+    <p class="subtitle">
+        Join a local fisherman on a traditional Sri Lankan
+        Oruwa and experience the coastal fishing life of Hikkaduwa.
+    </p>
+
+
+    <!-- EXPERIENCE INFO -->
+
+    <div class="info">
+
+        <div class="info-box">
+            🌊
+            <small>Location</small>
+            <strong>Hikkaduwa</strong>
+        </div>
+
+        <div class="info-box">
+            🛶
+            <small>Experience</small>
+            <strong>Traditional Oruwa</strong>
+        </div>
+
+        <div class="info-box">
+            🌅
+            <small>Time</small>
+            <strong>Early Morning</strong>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+
+        <!-- DESCRIPTION -->
+
+        <div>
+
+            <h2>
+                Experience local fishing life
+            </h2>
+
+            <p class="description">
+
+                Experience the traditional fishing life of Hikkaduwa
+                from a real Sri Lankan Oruwa.
+
+                <br><br>
+
+                Join a local fisherman, head out into the coastal
+                waters and learn how lobster fishing is done locally.
+
+                <br><br>
+
+                This is more than just a fishing trip —
+                it is an opportunity to experience a part of
+                Sri Lanka's traditional coastal lifestyle.
+
+            </p>
+
+
+            <div class="includes">
+
+                <h2>
+                    What's Included
+                </h2>
+
+                <div>
+                    🛶 Traditional Oruwa experience
+                </div>
+
+                <div>
+                    🦞 Lobster fishing activity
+                </div>
+
+                <div>
+                    🌅 Early morning coastal experience
+                </div>
+
+                <div>
+                    👨‍🌾 Local fisherman host
+                </div>
+
+                <div>
+                    📸 Local fishing-life experience
+                </div>
+
+            </div>
+
+
+            <!-- SAFETY -->
+
+            <div class="safety">
+
+                <h3>
+                    ⚠️ Important Information
+                </h3>
+
+                <p>
+
+                    Lobster catch is not guaranteed.
+
+                    <br><br>
+
+                    Trips are subject to sea and weather
+                    conditions and applicable fisheries regulations.
+
+                    <br><br>
+
+                    Safety instructions must be followed
+                    throughout the experience.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOOKING -->
+
+        <div class="booking">
+
+            <h3>
+                Request to Join
+            </h3>
+
+            <div class="booking-row">
+
+                <label>
+                    DATE
+                </label>
+
+                <input type="date">
+
+            </div>
+
+
+            <div class="booking-row">
+
+                <label>
+                    GUESTS
+                </label>
+
+                <select>
+
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4 Guests</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="booking-row">
+
+                <label>
+                    YOUR NAME
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+
+            <div class="booking-row">
+
+                <label>
+                    EMAIL
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                >
+
+            </div>
+
+
+            <button
+                class="join"
+                onclick="alert('Your request has been received! We will contact you soon.')"
+            >
+
+                🦞 Request to Join
+
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <h2>
+        LankaBuddy 🇱🇰
+    </h2>
+
+    <p>
+        Experience Sri Lanka with a local.
+    </p>
+
+    <p>
+        © 2026 LankaBuddy
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
